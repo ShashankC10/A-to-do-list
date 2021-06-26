@@ -9,7 +9,7 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://Shashank:Shashank3087@cluster0.bgwkk.mongodb.net/todolistdb?retryWrites=true&w=majority",{useNewUrlParser:true},{ useUnifiedTopology: true });
+mongoose.connect("mongodb+srv://Shashank:"+process.env.password+"@cluster0.bgwkk.mongodb.net/todolistdb?retryWrites=true&w=majority",{useNewUrlParser:true},{ useUnifiedTopology: true });
 
 const itemSchema= {
     name : String
